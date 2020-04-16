@@ -1,0 +1,12 @@
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\bin\Debug\ClassRegisterApp.exe.config
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\bin\Debug\ClassRegisterApp.exe
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\bin\Debug\ClassRegisterApp.pdb
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.csprojAssemblyReference.cache
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.Form1.resources
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.Properties.Resources.resources
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.csproj.GenerateResource.cache
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.exe
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.pdb
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.queryStudentsForm.resources
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.queryClassesForm.resources
+C:\Users\tktun\source\repos\ClassRegisterApp\ClassRegisterApp\obj\Debug\ClassRegisterApp.createClassForm.resources
