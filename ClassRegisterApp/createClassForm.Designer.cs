@@ -25,16 +25,16 @@
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBuoi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNguoiDay = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.dateNgay = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -57,12 +57,12 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "(Mặc định)";
             // 
-            // textBox2
+            // txtTen
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtTen.Location = new System.Drawing.Point(107, 40);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(192, 20);
+            this.txtTen.TabIndex = 3;
             // 
             // label2
             // 
@@ -82,21 +82,16 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Buổi:";
             // 
-            // comboBox1
+            // comboBuoi
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(107, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 21);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(107, 93);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(192, 21);
-            this.comboBox2.TabIndex = 7;
+            this.comboBuoi.FormattingEnabled = true;
+            this.comboBuoi.Items.AddRange(new object[] {
+            "Sáng",
+            "Chiều"});
+            this.comboBuoi.Location = new System.Drawing.Point(107, 66);
+            this.comboBuoi.Name = "comboBuoi";
+            this.comboBuoi.Size = new System.Drawing.Size(192, 21);
+            this.comboBuoi.TabIndex = 5;
             // 
             // label4
             // 
@@ -107,12 +102,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Ngày:";
             // 
-            // textBox3
+            // txtNguoiDay
             // 
-            this.textBox3.Location = new System.Drawing.Point(107, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 20);
-            this.textBox3.TabIndex = 9;
+            this.txtNguoiDay.Location = new System.Drawing.Point(107, 120);
+            this.txtNguoiDay.Name = "txtNguoiDay";
+            this.txtNguoiDay.Size = new System.Drawing.Size(192, 20);
+            this.txtNguoiDay.TabIndex = 9;
             // 
             // label5
             // 
@@ -132,6 +127,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // exitButton
             // 
@@ -144,20 +140,30 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // dateNgay
+            // 
+            this.dateNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateNgay.Location = new System.Drawing.Point(107, 93);
+            this.dateNgay.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dateNgay.MinDate = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
+            this.dateNgay.Name = "dateNgay";
+            this.dateNgay.Size = new System.Drawing.Size(192, 20);
+            this.dateNgay.TabIndex = 12;
+            // 
             // createClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(311, 192);
+            this.Controls.Add(this.dateNgay);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNguoiDay);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBuoi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -175,15 +181,15 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBuoi;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNguoiDay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.DateTimePicker dateNgay;
     }
 }

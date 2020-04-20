@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +52,11 @@
     </Compile>
     <Compile Include="createClassForm.Designer.cs">
       <DependentUpon>createClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="devDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>devDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -95,6 +101,17 @@
       <DependentUpon>queryStudentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="devDataSet.xsc">
+      <DependentUpon>devDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="devDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>devDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="devDataSet.xss">
+      <DependentUpon>devDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
