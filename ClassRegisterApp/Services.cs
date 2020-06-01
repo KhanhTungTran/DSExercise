@@ -9,8 +9,7 @@ using System.Data;
 
 namespace ClassRegisterApp {
     class Services {
-        static private string connString = ConfigurationManager.ConnectionStrings["ClassRegisterApp.Properties.Settings.devConnectionString"].ConnectionString.ToString();
-        static SqlConnection conn = new SqlConnection(connString);
+        static SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=Classroom;Integrated Security=True");
         public static void OpenConnection() {
             if (conn.State != System.Data.ConnectionState.Open) {
                 conn.Close();
@@ -21,7 +20,6 @@ namespace ClassRegisterApp {
         public static void CloseConnection() {
             if (conn.State != System.Data.ConnectionState.Closed) {
                 conn.Close();
-                //conn.Open();
             }
         }
 

@@ -171,7 +171,7 @@
             this.MaximizeBox = false;
             this.Name = "createClassForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "createClassForm";
+            this.Text = "Thêm Lớp học";
             this.ResumeLayout(false);
             this.PerformLayout();
 

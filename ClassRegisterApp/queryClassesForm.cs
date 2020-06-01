@@ -24,9 +24,9 @@ namespace ClassRegisterApp {
             bool Buoi = default, coBuoi = true;
             if (comboBuoi.Text != "(None)") {
                 if (comboBuoi.Text == "Sáng") {
-                    Buoi = false;
+                    Buoi = true;
                 }
-                else { Buoi = true; }
+                else { Buoi = false; }
             }
             else coBuoi = false;
 
@@ -40,6 +40,7 @@ namespace ClassRegisterApp {
                                             checkBoxCoNgay.Checked ? dateTimePickerNgay.Value.Date : default)
                                           );
                 dsLopHoc.DataSource = dt;
+                //MessageBox.Show(dt.ToString());
 
                 btnXemDS.Enabled = true;
                 btnSuaLopHoc.Enabled = true;
@@ -124,9 +125,9 @@ namespace ClassRegisterApp {
             bool Buoi = default, coBuoi = true;
             if (comboBuoi.Text != "(None)") {
                 if (comboBuoi.Text == "Sáng") {
-                    Buoi = false;
+                    Buoi = true;
                 }
-                else { Buoi = true; }
+                else { Buoi = false; }
             }
             else coBuoi = false;
 
